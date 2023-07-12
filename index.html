@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>360 masterplan</title>
+  <link rel="stylesheet" href="style/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css" />
+  <style>
+     @font-face {
+      font-family: Montserrat;
+      src: url(assets/fonts/Montserrat.ttf);
+    }
+
+    @font-face {
+      font-family: Times New Roman;
+      src: url(assets/fonts/Times_New_Roman.ttf);
+    }
+
+    h1, h2 {
+      font-family: Times New Roman;
+    }
+
+    button, p {
+      font-family: Montserrat;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="modal-wrapper"></div>
+  <div class="modal-review">
+      <p class="modal-review_title"></p>
+      <div id="viewer"></div>
+    <button class="modal-review_btn-close btn-close"><img src="assets/icons/close.svg" alt="close"></button>
+  </div>
+  <div class="modal-download">
+    <div class="modal-download_container">
+      <div class="modal-download_block">
+        <h2 class="modal-download_title">don't miss <br> the unique offer</h2>
+        <p class="modal-download_text">Be the first to experience the beauty of Keturah <br> Resort at our exclusive
+          private screening event! <br> Leave your contact information below to <br> receive an invitation to our
+          special event.</p>
+        <div class="modal-download_container-messengers">
+          <div class="modal-download_messengers">
+            <img class="modal-download_messengers-img" src="assets/icons/telegram.svg" alt="telegram">
+            <p class="modal-download_messengers-text">Telegram</p>
+          </div>
+          <div class="modal-download_messengers">
+            <img class="modal-download_messengers-img" src="assets/icons/whatsapp.svg" alt="whatsapp">
+            <p class="modal-download_messengers-text">WhatsApp</p>
+          </div>
+        </div>
+      </div>
+      <form class="modal-download_form" action="">
+        <input class="modal-download_input" type="text" placeholder="Your name">
+        <input class="modal-download_input" type="email" placeholder="Your e-mail">
+        <input class="modal-download_input" type="number" placeholder="Phone number">
+        <button class="modal-download_btn">Join now</button>
+      </form>
+    </div>
+    <button class="modal-download_btn-close btn-close"><img src="assets/icons/close.svg" alt="close"></button>
+  </div>
+  <div class="container">
+    <header class="header">
+      <div class="header_container-logo"><img class="header_logo" src="assets/logo.svg"
+          alt="THE RITZ-CARLTON RESIDENCES"></div>
+      <div class="header_container-content">
+        <div class="header_container-messengers">
+          <div class="header_messengers">
+            <img class="header_messengers-img" src="assets/icons/telegram.svg" alt="telegram">
+          </div>
+          <div class="header_messengers">
+            <img class="header_messengers-img" src="assets/icons/whatsapp.svg" alt="whatsapp">
+          </div>
+        </div>
+        <p class="header_number">+99899 xxx xx xx</p>
+      </div>
+    </header>
+    <main class="main">
+      <button class="btn-review btn-large" id="apartments">
+        <p class="btn-review_mark">M1</p>
+        <p class="btn-review_title">Apartments</p>
+      </button>
+      <button class="btn-review btn-large" id="mansions">
+        <p class="btn-review_mark">M2</p>
+        <p class="btn-review_title">Mansions</p>
+      </button>
+      <button class="btn-review btn-small" id="park">
+        <p class="btn-review_mark">P1</p>
+        <p class="btn-review_title">Park</p>
+      </button>
+      <button class="btn-review btn-small" id="road">
+        <p class="btn-review_mark">R2</p>
+        <p class="btn-review_title">Road</p>
+      </button>
+      <button class="btn-download">
+        <div class="btn-download_container">
+          <p class="btn-download_text">Download brochure</p>
+          <img src="assets/icons/download.svg" alt="download">
+        </div>
+      </button>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.js"></script>
+  <script type="module" src="script/modal.js"></script>
+  <script type="module" src="script/viewer.js"></script>
+</body>
+
+</html>

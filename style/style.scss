@@ -1,0 +1,371 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  background: url(../assets/images/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  margin: auto;
+  position: relative;
+  // padding: 30px 33px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 30vh;
+    display: block;
+    opacity: 0.7;
+    background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+  }
+}
+
+.header {
+  min-height: 44px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px #d9d9d9;
+  z-index: 3;
+  position: relative;
+  padding-top: 30px;
+  margin: 0 33px;
+
+  &_container-content {
+    display: flex;
+    // align-items: center;
+    max-width: 281px;
+    width: 100%;
+  }
+
+  &_container-messengers {
+    display: flex;
+    column-gap: 15px;
+    justify-content: center;
+    max-width: 105px;
+    width: 100%;
+    border-left: solid 1px #d9d9d9;
+    border-right: solid 1px #d9d9d9;
+  }
+
+  &_container-logo {
+    margin-right: 20px;
+  }
+
+  &_number {
+    margin: auto 0 auto 15px;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+
+  &_messengers {
+    margin: auto 0;
+
+    &-img {
+      width: 100%;
+      margin: auto;
+    }
+  }
+}
+
+#apartments {
+  top: 24vh;
+  left: 52vw;
+}
+
+#mansions {
+  top: 47vh;
+  left: 19vw;
+}
+
+#park {
+  top: 42vh;
+  left: 37vw;
+}
+
+#road {
+  top: 53vh;
+  left: 65vw;
+}
+
+.btn-download,
+.btn-review {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-large {
+  width: 131px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    border: 30px solid transparent;
+    border-left: 45px solid rgba(255, 255, 255, 0.1);
+    border-top: 25px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 0px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+.btn-small {
+  width: 89px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    border: 30px solid transparent;
+    border-left: 30px solid rgba(255, 255, 255, 0.1);
+    border-top: 25px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 0px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+.btn-review {
+  height: 25px;
+  font-size: 14px;
+  padding: 4px;
+  position: relative;
+
+  &_mark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    max-width: 19px;
+    width: 100%;
+    height: 19px;
+    color: #000;
+    background-color: #fff;
+  }
+
+  &_title {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.btn-download {
+  width: 310px;
+  height: 44px;
+  border: none;
+  position: relative;
+  top: 61vh;
+  left: 13vw;
+  font-size: 16px;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    border: 140px solid transparent;
+    border-left: 113px solid rgba(255, 255, 255, 0.1);
+    border-top: 44px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 0px solid rgba(255, 255, 255, 0.1);
+  }
+
+  &_text {
+  }
+
+  &_container {
+    max-width: 251px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    // min-height: 31px;
+  }
+}
+
+.modal-wrapper {
+  display: none;
+
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 4;
+
+  &_active-download {
+    display: block;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+  }
+
+  &_active-review {
+    display: block;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+  }
+}
+
+.modal-review,
+.modal-download {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#viewer {
+  width: 87vw;
+  height: 79vh;
+}
+
+.modal-review {
+  width: 87vw;
+  flex-direction: column;
+
+  &_active {
+    display: flex;
+  }
+
+  &_container {
+  }
+
+  &_image {
+  }
+
+  &_btn-close {
+    top: 6%;
+    right: 0;
+  }
+
+  &_title {
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    top: -3vh;
+    left: 37vw;
+    text-transform: capitalize;
+  }
+}
+
+.modal-download {
+  max-width: 936px;
+
+  &_active {
+    display: flex;
+  }
+
+  &_container {
+    width: 63vw;
+    height: 54vh;
+    display: flex;
+  }
+
+  &_block {
+    background: url(../assets/images/bg_form.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 30px;
+  }
+
+  &_title,
+  &_text {
+    color: #ffffff;
+    text-align: center;
+  }
+
+  &_title {
+    text-transform: capitalize;
+    font-size: 45px;
+    font-weight: 400;
+  }
+
+  &_text {
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  &_container-messengers {
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+  }
+
+  &_messengers {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    &-img {
+    }
+
+    &-text {
+      color: #f3f2ef;
+    }
+  }
+
+  &_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    row-gap: 44px;
+    background: rgba(0, 0, 0);
+    backdrop-filter: blur(10px);
+  }
+
+  &_input {
+    width: 397px;
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid #919191;
+    padding-left: 15px;
+    background: none;
+    font-size: 18px;
+    color: #fff;
+
+    &::placeholder {
+      font-size: 18px;
+      color: #fff;
+    }
+  }
+
+  &_btn {
+    width: 397px;
+    height: 50px;
+    border: none;
+    background: #fff;
+    font-size: 18px;
+    color: #000;
+    text-transform: uppercase;
+  }
+
+  &_btn-close {
+    bottom: 76%;
+    left: 100%;
+  }
+}
+
+.btn-close {
+  border: none;
+  background: none;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  cursor: pointer;
+}
