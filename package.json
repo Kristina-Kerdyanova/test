@@ -2,5 +2,8 @@
   "dependencies": {
     "@photo-sphere-viewer/core": "^5.1.7",
     "three": "^0.154.0"
+  },
+  "devDependencies": {
+    "vite": "^4.4.3"
   }
 }
